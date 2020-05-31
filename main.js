@@ -1,41 +1,80 @@
+var canvas = null;
+var context = null;
+var bufferCanvas = null;
+var bufferCanvasCtx = null;
+var flakeArray = [];
+var flakeTimer = null;
+var maxFlakes = 200; // Here you may set max flackes to be created 
 
-function randomColor(){
-    let colorGen =  "0123456789ABCDEF";
-    let len = colorGen.length;
-    let color = "#";
-    for(let i = 0; i < 6; i++) {
-      color += colorGen[Math.floor(Math.random()*len)];
+function init() {
+    //Canvas on Page
+    canvas = document.getElementById('canvasRain');
+    context = canvas.getContext("2d");
+    //Buffer Canvas
+    bufferCanvas = document.createElement("canvas");
+    bufferCanvasCtx = bufferCanvas.getContext("2d");
+    bufferCanvasCtx.canvas.width = context.canvas.width;
+    bufferCanvasCtx.canvas.height = context.canvas.height;
+
+    
+    flakeTimer = setInterval(addFlake, 200);
+
+    Draw();
+
+    setInterval(animate, 30);
+     
+}
+function animate() {
+    
+    Update();
+    Draw();
+    
+}
+function addFlake() {
+
+    flakeArray[flakeArray.length] = new Flake();
+    if (flakeArray.length == maxFlakes)
+        clearInterval(flakeTimer);
+}
+function blank() {
+    bufferCanvasCtx.fillStyle = "rgba(0,0,0,0.8)";
+    bufferCanvasCtx.fillRect(0, 0, bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
+    
+}
+function Update() {
+    for (var i = 0; i < flakeArray.length; i++) {
+        if (flakeArray[i].y < context.canvas.height) {
+            flakeArray[i].y += flakeArray[i].speed;
+            if (flakeArray[i].y > context.canvas.height)
+                flakeArray[i].y = -5;
+            flakeArray[i].x += flakeArray[i].drift;
+            if (flakeArray[i].x > context.canvas.width)
+                flakeArray[i].x = 0;
+        }
+    }
+    
+}
+function Flake() {
+    this.x = Math.round(Math.random() * context.canvas.width);
+    this.y = -10;
+    this.drift = Math.random();
+    this.speed = Math.round(Math.random() * 5) + 1;
+    this.width = (Math.random() * 3) + 2;
+    this.height = this.width;
+}
+function Draw() {
+    context.save();
+    
+    blank();
+
+    for (var i = 0; i < flakeArray.length; i++) {
+        bufferCanvasCtx.fillStyle = "white";
+        //bufferCanvasCtx.fillRect(flakeArray[i].x, flakeArray[i].y, flakeArray[i].width, flakeArray[i].height);
+        bufferCanvasCtx.font = "30px Arial"
+        bufferCanvasCtx.fillText("@", flakeArray[i].x, flakeArray[i].y)
     }
 
-    return color;
-  }
-
-  function randomChar(){
-    let letters = "@#+*',.";
-    let len = letters.length;
-    let char =  letters[Math.floor(Math.random()*len)];
-    return char;
-  }
-
-  function show(){
-      let el = document.getElementById("divs");
-      let element = document.createElement("div");
-      element.className = "drops";
-      element.innerHTML = randomChar();
-      element.style.color = "#FFFFFF";//randomColor();
-      element.style.fontsize =  Math.floor(Math.random()*50) + 10 +"px";
-      element.style.top = -50+"px";
-      element.style.left = Math.floor(Math.random()*1400)+"px";
-      element.style.animationDuration = Math.floor(Math.random()* 10) + 5+"s";
-      element.style.animationIterationCount = "infinite";
-      element.style.animationDelay = Math.floor(Math.random()* 15) +"s";
-      element.style.zIndex = Math.floor(Math.random()*20);
-      el.appendChild(element);
-  }
-
-
-  function call(){
-    for(let i = 0; i < 300; i++){
-      show();
-    }
-  }
+    
+    context.drawImage(bufferCanvas, 0, 0, bufferCanvas.width, bufferCanvas.height);
+    context.restore();
+}
