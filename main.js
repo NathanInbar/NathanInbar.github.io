@@ -1,10 +1,4 @@
-var max = 1920//max x pos
-var min = 1080//max y pos
-//small symbols can show in higher layer, but not vice versa
-var foreground = ['@','#','+','*','\'',',','.']
-var midground = ['+','*','\'',',','.']
-var background = ['\'',',','.']
-// - - -
+
 function randomColor(){
     let colorGen =  "0123456789ABCDEF";
     let len = colorGen.length;
@@ -12,17 +6,17 @@ function randomColor(){
     for(let i = 0; i < 6; i++) {
       color += colorGen[Math.floor(Math.random()*len)];
     }
-  
+
     return color;
   }
-  
+
   function randomChar(){
     let letters = "@#+*',.";
     let len = letters.length;
-    let char =  letters[Math.floor(Math.random()*len)]; 
+    let char =  letters[Math.floor(Math.random()*len)];
     return char;
   }
-  
+
   function show(){
       let el = document.getElementById("divs");
       let element = document.createElement("div");
@@ -38,8 +32,8 @@ function randomColor(){
       element.style.zIndex = Math.floor(Math.random()*20);
       el.appendChild(element);
   }
-  
-  
+
+
   function call(){
     for(let i = 0; i < 300; i++){
       show();
