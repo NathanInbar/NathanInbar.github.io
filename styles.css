@@ -1,0 +1,63 @@
+.bkg {
+    background-color: rgb(10, 10, 10);
+}
+.fall {
+    color: white;
+    position: absolute;
+    animation-name: fall;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 4s;
+}
+@keyframes bkg-color
+{
+    from {background-color: rgb(30, 30, 30)}
+    to {background-color: rgb(200, 30, 30)}
+}
+@keyframes fall
+{
+    from {top: 100px}
+    to {top: 200px;}
+}
+/* - - - */
+*{
+    margin: 0;
+	padding: 0;
+}
+
+body {
+	
+    overflow: hidden;
+    height: 100%;
+}
+
+#divs {
+    height: 100%;
+    width: 100%;
+}
+/* .char-drop */
+.drops{
+    height: 100%;
+    width: 100%;
+	position: absolute;
+    font-size: 1rem;
+    /* top: -10; */
+    margin: 0;
+    padding: 0;
+    animation-name: drop;
+    /*animation-duration:;*/
+
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* translate: rotateX(360deg) 5s ease; */
+    /* animation-duration: 10s; */
+
+}
+
+@keyframes drop {
+    from{ transform: translateY(-5%)}
+    to{transform: translateY(120%)}
+}
