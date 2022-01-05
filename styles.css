@@ -7,6 +7,21 @@ body {
   color: #1adfba;
 }
 .navbar__container {
+  position: fixed;
+  top: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media screen and (orientation: portrait) {
+  .navbar__container {
+    position: fixed;
+    display: flex;
+    top: 0;
+    background-color: #fff;
+  }
+  .navbar__name {
+    display: none;
+  }
 }
 .navbar__container,
 .navbar__item__container {
@@ -44,9 +59,16 @@ body {
   border-radius: 50%;
 }
 
+.project__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .project__card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 20px;
   background-color: rgba(0, 136, 174, 0.3);
@@ -66,6 +88,11 @@ body {
   width: 128px;
   margin-top: 1rem;
   animation: floating 3s ease-in-out infinite;
+}
+
+.spacer {
+  width: 1vh;
+  height: 0.5vh;
 }
 
 @keyframes floating {
