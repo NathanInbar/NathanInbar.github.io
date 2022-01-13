@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
 
@@ -10,20 +10,25 @@
 </head>
 <body> <!-- onload="call()" class="bkg"-->
 
+<div class="body__container">
+
+
+
 <div class="introduction__container">
   <h1>Hi, I'm Nathan</h1>
   <h4>student, computer scientist, photographer</h4>
 </div>
 
 <div class="home__container">
-  <img src="./media/assets/profile_portrait.png" alt="Nathan Inbar portrait">
-  <div class="home__polygon">
-    <div class="polygon__icons">
-      <!-- img*3 -->
-      
+  <div class="home__image">
+    <img src="./media/assets/profile_portrait.png" alt="Nathan Inbar portrait" id="portrait">
+    <div class="portrait__polygon">
+        <!--div class="polygon__icons">
+          <!-- img*3 
+          
+        </div-->
     </div>
   </div>
-  <div class="home__separator"></div>
   <div class="nav__container">
     <h3>projects</h3>
     <h3>photos</h3>
@@ -40,7 +45,7 @@
 <div class="content__container">
   <!-- resume -->
 </div>
-
+</div>
   <script src="main.js"></script>
 </body>
 </html>
