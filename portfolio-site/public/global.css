@@ -1,17 +1,24 @@
 html,
 body {
+  margin: 0;
 }
 
 html {
-  background-color: #eceff4;
-  background-image: url("/assets/site/undulate_bkg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  --global_margin: 20%;
 }
 
 body {
   font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  display: block;
+  background-color: #141d27;
+  background-image: url("/assets/site/space_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue;
+  width: 100%;
+  height: 100%;
+  resize: both;
 }
 
 a {

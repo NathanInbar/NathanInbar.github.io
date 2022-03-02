@@ -1,30 +1,40 @@
 <script>
-	export let name;
+  import Test from "./Components/Test.svelte";
+  let x = 20;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<span id="bkg">
+  <div id="main__container">
+    <h1>Hello World</h1>
+  </div>
+  <Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test
+  /><Test /><Test /><Test /><Test />
+  <Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test
+  /><Test /><Test /><Test /><Test />
+</span>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  #bkg {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  #main__container {
+    display: flex;
+    border: 1px solid magenta;
+    background-color: rgba(
+      rgb(196, 53, 53),
+      rgb(28, 199, 28),
+      rgb(37, 37, 151),
+      0.3
+    );
+    margin-left: var(--global_margin);
+    margin-right: var(--global_margin);
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  h1 {
+    color: aliceblue;
+  }
 </style>
