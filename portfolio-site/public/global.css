@@ -5,7 +5,7 @@ body {
 
 html {
   --global_margin: 10%;
-
+  --global_accent: #eb321a;
   /*light background text palette:*/
   --global_header_light: #1c1d21;
   --global_stroke_light: #a7a7b0;
@@ -24,35 +24,9 @@ body {
   resize: both;
 }
 
-a {
-}
-
-a:hover {
-}
-
+a,
+a:link,
 a:visited {
-}
-
-label {
-}
-
-input,
-button,
-select,
-textarea {
-}
-
-input:disabled {
-}
-
-button {
-}
-
-button:disabled {
-}
-
-button:not(:disabled):active {
-}
-
-button:focus {
+  color: var(--global_accent);
+  text-decoration: none;
 }

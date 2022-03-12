@@ -13,6 +13,14 @@
         hackathon entry, and many other projects. I enjoy film photography,
         tennis, rock climbing, and digital art!
       </p>
+      <span id="main__links"
+        ><a href="https://github.com/NathanInbar" target="_blank">Github 💻</a
+        ><a
+          href="https://github.com/NathanInbar/NathanInbar/raw/main/Nathan_Inbar_Resume_2022.pdf"
+          target="_blank"
+          download>Resume (download) 📜</a
+        ></span
+      >
     </div>
     <br />
 
@@ -42,6 +50,9 @@
     display: flex;
     flex-direction: column;
     border: 0px solid magenta;
+  }
+  #main__links > a {
+    margin-right: 5%;
   }
   /* centers main container on mobile */
   @media only screen and (max-width: 620px) {
