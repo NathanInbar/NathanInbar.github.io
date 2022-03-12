@@ -1,0 +1,28 @@
+<script>
+  export let img_src;
+</script>
+
+<div>
+  <div class="thumbnail">
+    <img src={"/assets/photography/" + img_src} alt="" />
+  </div>
+</div>
+
+<style>
+  .thumbnail {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .thumbnail img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+</style>

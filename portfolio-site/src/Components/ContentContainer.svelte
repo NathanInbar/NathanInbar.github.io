@@ -1,4 +1,7 @@
 <script>
+  import PhotoContainer from "./PhotoContainer.svelte";
+  import { photos } from "./stores.js";
+
   export let title;
   let showContent = false;
 
@@ -21,7 +24,18 @@
 </div>
 
 <!-- container's content -->
-<div />
+{#if showContent}
+  <div>
+    {#if title == "Projects"}
+      <!-- todo -->
+    {/if}
+    {#if title == "Photos"}
+      {#each $photos as photo}
+        <PhotoContainer img_src={photo} />
+      {/each}
+    {/if}
+  </div>
+{/if}
 
 <style>
   div {

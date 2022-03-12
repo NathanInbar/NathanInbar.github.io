@@ -18,11 +18,6 @@
 
     <ContentContainer title="Projects" />
     <ContentContainer title="Photos" />
-
-    <Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test
-    /><Test /><Test /><Test /><Test /><Test />
-    <Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test /><Test
-    /><Test /><Test /><Test /><Test /><Test />
   </span>
 </span>
 
