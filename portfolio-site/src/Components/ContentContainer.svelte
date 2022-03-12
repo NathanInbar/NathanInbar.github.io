@@ -1,7 +1,7 @@
 <script>
   import PhotoContainer from "./PhotoContainer.svelte";
   import ProjectContainer from "./ProjectContainer.svelte";
-  import { photos } from "./stores.js";
+  import { photos, projects } from "./stores.js";
 
   export let title;
   let showContent = true;
@@ -29,25 +29,16 @@
 {#if showContent}
   <div class="content__container">
     {#if title == "Projects"}
-      <ProjectContainer
-        title="Lorem"
-        img_src="https://i.ytimg.com/vi/5gUVDYUiFUY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB2NSjFO9LEOGYx-YKsvrInNL0LJA"
-        link="https://youtu.be/5gUVDYUiFUY"
-        desc="I've been doing serious photography for about a year and a half, and I still don't quite feel comfortable with calling myself a photographer."
-      />
-      <ProjectContainer
-        title="Lorem"
-        img_src="https://i.ytimg.com/an_webp/VyaNip2X38Q/mqdefault_6s.webp?du=3000&sqp=CNidsJEG&rs=AOn4CLAqioz0Iux7XHDWkjeKCJEVqEhp7w"
-        link="https://www.youtube.com/watch?v=VyaNip2X38Q&t=12s"
-        desc="dolor"
-      />
-      <ProjectContainer
-        title="Lorem"
-        img_src="https://i.ytimg.com/an_webp/VyaNip2X38Q/mqdefault_6s.webp?du=3000&sqp=CNidsJEG&rs=AOn4CLAqioz0Iux7XHDWkjeKCJEVqEhp7w"
-        link="https://www.youtube.com/watch?v=VyaNip2X38Q&t=12s"
-        desc="dolor"
-      />
+      {#each $projects as project}
+        <ProjectContainer
+          title={project[0]}
+          img_src={project[1]}
+          link={project[2]}
+          desc={project[3]}
+        />
+      {/each}
     {/if}
+
     <!-- end project containers -->
     {#if title == "Photos"}
       {#each $photos as photo}
@@ -83,7 +74,6 @@
     flex-flow: row wrap;
     justify-content: center;
     gap: 1%;
-    border: 1px solid green;
   }
 
   #dropdown_icon {

@@ -24,6 +24,9 @@
   #main {
     margin-bottom: 1%;
     align-self: left;
+    /* border: 1px dashed var(--global_header_light); */
+    border-radius: 2px;
+    background-color: #f2f2ff;
   }
   a {
     color: var(--global_header_light);
@@ -37,9 +40,9 @@
     margin: 0;
   }
   p {
+    text-align: center;
     font-size: 1rem;
     max-width: 400px;
-    background-color: #f2f2ff;
   }
   .project__container {
     width: 400px;
@@ -51,7 +54,6 @@
     border: 1px solid mar;
   }
   .project__container > h2 {
-    background-color: rgba(242, 242, 255, 0.6);
-    width: 100%;
+    background-color: rgba(242, 242, 255, 0.85);
   }
 </style>
