@@ -55,6 +55,14 @@
     color: var(--global_header_light);
     user-select: none;
   }
+
+  @media only screen and (max-width: 620px) {
+    .content__container {
+      flex-direction: column !important;
+      align-items: center;
+    }
+  }
+
   .content__container {
     display: flex;
     flex-direction: row;
