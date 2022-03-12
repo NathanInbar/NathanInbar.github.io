@@ -1,6 +1,5 @@
 <script>
   import ContentContainer from "./Components/ContentContainer.svelte";
-  import Test from "./Components/Test.svelte";
 </script>
 
 <span id="bkg">
@@ -49,7 +48,6 @@
   #main__container {
     display: flex;
     flex-direction: column;
-    border: 0px solid magenta;
   }
   #main__links > a {
     margin-right: 5%;

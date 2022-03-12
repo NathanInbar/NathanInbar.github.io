@@ -75,15 +75,11 @@
     display: inline-block;
   }
   .dropdown_icon_rt {
-    animation: rotate-rt 0.5s 1;
+    animation: rotate 0.5s 1;
     /* animation-fill-mode: forwards; */
   }
-  .dropdown_icon_lt {
-    animation: rotate-lt 0.5s 1;
-    animation-fill-mode: forwards;
-  }
 
-  @keyframes rotate-rt {
+  @keyframes rotate {
     0% {
       transform: rotate(0deg);
     }
