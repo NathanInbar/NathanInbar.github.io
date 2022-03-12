@@ -8,6 +8,7 @@ html {
 
   /*light background text palette:*/
   --global_header_light: #1c1d21;
+  --global_stroke_light: #a7a7b0;
 }
 
 body {
