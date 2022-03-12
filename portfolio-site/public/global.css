@@ -4,7 +4,7 @@ body {
 }
 
 html {
-  --global_margin: 20%;
+  --global_margin: 10%;
 
   /*light background text palette:*/
   --global_header_light: #1c1d21;
@@ -18,7 +18,6 @@ body {
   background-image: url("/assets/site/constellation_light.svg");
   background-size: auto;
   background-repeat: repeat;
-  color: aliceblue;
   width: 100%;
   height: 100%;
   resize: both;
