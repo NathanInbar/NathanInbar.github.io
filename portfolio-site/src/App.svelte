@@ -12,14 +12,15 @@
         hackathon entry, and many other projects. <br /> I enjoy film photography,
         tennis, rock climbing, and digital art!
       </p>
-      <span id="main__links"
-        ><a href="https://github.com/NathanInbar" target="_blank">Github 💻</a
-        ><a
+      <span id="main__links">
+        <a href="https://github.com/NathanInbar" target="_blank">Github 💻</a>
+        <a
           href="https://github.com/NathanInbar/NathanInbar/raw/main/Nathan_Inbar_Resume_2022.pdf"
           target="_blank"
           download>Resume (download) 📜</a
-        ></span
-      >
+        >
+        <a href="mailto:nathaninbar1@gmail.com">Email Me 📧</a>
+      </span>
     </div>
     <br />
 
