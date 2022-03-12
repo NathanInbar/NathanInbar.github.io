@@ -22,6 +22,12 @@ export let projects = new writable([
     "https://www.youtube.com/watch?v=6eza_Ij9gHg&t=20s",
     "A fun game made for TuffyHacks 2022, also a winning project",
   ],
+  [
+    "TOIP",
+    "https://raw.githubusercontent.com/NathanInbar/TOIPapp/master/toip_ss.png",
+    "https://play.google.com/store/apps/details?id=com.weedawgiee.toip&hl=en_CA&gl=US",
+    "A fully fledged mobile game available on Google Play Store",
+  ],
 ]);
 
 //Thumnail Link, Imgur Link
@@ -32,4 +38,6 @@ export let photos = new readable([
   ["https://i.imgur.com/WBFv5L4.jpeg", "https://imgur.com/gallery/gpRxyDq"],
   ["https://i.imgur.com/O9hh0TL.jpeg", "https://imgur.com/gallery/DArZD9k"],
   ["https://i.imgur.com/yXyzIJa.jpeg", "https://imgur.com/gallery/kchCKnw"],
+  ["https://i.imgur.com/XpEyxMq.jpeg", "https://imgur.com/gallery/F2VHcGH"],
+  ["https://i.imgur.com/NTDC35c.jpeg", "https://imgur.com/gallery/DQ4NXGj"],
 ]);

@@ -46,6 +46,13 @@
       {/each}
     {/if}
   </div>
+  {#if title == "Projects"}
+    <p>
+      view more on <a href="https://github.com/NathanInbar" target="_blank"
+        >my github profile</a
+      >
+    </p>
+  {/if}
   {#if title == "Photos"}
     <p>
       view more on <a
