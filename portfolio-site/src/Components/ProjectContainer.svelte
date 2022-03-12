@@ -1,12 +1,12 @@
 <script>
+  import { slide } from "svelte/transition";
   export let title;
   export let img_src;
   export let desc;
   export let link;
-  let show_desc = false;
 </script>
 
-<div id="main">
+<div id="main" transition:slide>
   <div>
     <a href={link} target="_blank">
       <div

@@ -14,10 +14,7 @@
 <!-- content container header, e.g: ">> Projects" -->
 <div on:click={dropdownToggle}>
   <h1>
-    <span
-      id="dropdown_icon"
-      class="dropdown_icon_rt"
-      style={"animation-fill-mode:" + (showContent ? "forwards" : "backwards")}
+    <span id="dropdown_icon" class={showContent ? "dropdown_icon_rt" : ""}
       >>></span
     >
     {title}
@@ -88,13 +85,10 @@
   }
   .dropdown_icon_rt {
     animation: rotate 0.5s 1;
-    /* animation-fill-mode: forwards; */
+    animation-fill-mode: forwards;
   }
 
   @keyframes rotate {
-    0% {
-      transform: rotate(0deg);
-    }
     100% {
       transform: rotate(90deg);
     }
