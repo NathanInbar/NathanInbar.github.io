@@ -10,8 +10,8 @@
       <h4>Student 👨‍🎓, Computer Scientist 👨‍💻, Photographer 📷</h4>
       <p>
         Hey, I'm Nathan. I've developed and published a mobile game, 2x winning
-        hackathon entry, and many other projects. Love to learn and create
-        awesome applications.
+        hackathon entry, and many other projects. I enjoy film photography,
+        tennis, rock climbing, and digital art!
       </p>
     </div>
     <br />

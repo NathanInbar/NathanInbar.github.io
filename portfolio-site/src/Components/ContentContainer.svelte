@@ -3,7 +3,7 @@
   import { photos } from "./stores.js";
 
   export let title;
-  let showContent = false;
+  let showContent = true;
 
   const dropdownToggle = () => {
     showContent = !showContent;
@@ -25,16 +25,28 @@
 
 <!-- container's content -->
 {#if showContent}
-  <div>
+  <div class="content__container">
     {#if title == "Projects"}
       <!-- todo -->
     {/if}
+
     {#if title == "Photos"}
       {#each $photos as photo}
-        <PhotoContainer img_src={photo} />
+        <PhotoContainer img_src={photo[0]} link={photo[1]} />
       {/each}
     {/if}
   </div>
+  {#if title == "Projects"}
+    <!--  -->
+  {/if}
+  {#if title == "Photos"}
+    <p>
+      view more on <a
+        href="https://imgur.com/user/nathaninbar/posts"
+        target="_blank">my imgur profile</a
+      >
+    </p>
+  {/if}
 {/if}
 
 <style>
@@ -42,6 +54,13 @@
     margin-left: 0;
     color: var(--global_header_light);
     user-select: none;
+  }
+  .content__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1%;
+    border: 1px solid red;
   }
 
   #dropdown_icon {
