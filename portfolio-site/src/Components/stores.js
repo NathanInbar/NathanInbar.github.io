@@ -2,7 +2,9 @@ import { readable, writable } from "svelte/store";
 
 export let dark_mode = new writable(false);
 
-export let photos = new writable([
+export let projects = new writable([]);
+
+export let photos = new readable([
   ["https://i.imgur.com/1mPJSQY.jpeg", "https://imgur.com/gallery/7s3GSuz"],
   ["https://i.imgur.com/7QeHP4X.jpeg", "https://imgur.com/gallery/kLanVqu"],
   ["https://i.imgur.com/UriAd6L.jpeg", "https://imgur.com/gallery/OW3hbYZ"],

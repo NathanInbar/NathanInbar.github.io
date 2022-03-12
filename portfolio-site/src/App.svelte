@@ -9,7 +9,7 @@
       <h4>Student 👨‍🎓, Computer Scientist 👨‍💻, Photographer 📷</h4>
       <p>
         Hey, I'm Nathan. I've developed and published a mobile game, 2x winning
-        hackathon entry, and many other projects. I enjoy film photography,
+        hackathon entry, and many other projects. <br /> I enjoy film photography,
         tennis, rock climbing, and digital art!
       </p>
       <span id="main__links"
@@ -40,7 +40,6 @@
     /* content container background rgb(242, 242, 255, ); */
     position: absolute;
     width: 80%;
-    height: 100%;
     margin-left: var(--global_margin);
     background-color: rgba(242, 242, 255, 0.6);
   }
@@ -50,7 +49,8 @@
     flex-direction: column;
   }
   #main__links > a {
-    margin-right: 5%;
+    margin-right: 2%;
+    word-wrap: break-word;
   }
   /* centers main container on mobile */
   @media only screen and (max-width: 620px) {
@@ -62,7 +62,6 @@
     font-size: 4rem;
     color: var(--global_header_light);
     margin-bottom: 0;
-    margin-left: -4px;
     text-decoration: underline;
   }
   h4 {
