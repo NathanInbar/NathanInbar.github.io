@@ -26,10 +26,24 @@
 
     <ContentContainer title="Projects" />
     <ContentContainer title="Photos" />
+    <a href="#main__container">back to top</a>
   </span>
 </span>
 
 <style>
+  /* centers main container on mobile */
+  @media only screen and (max-width: 620px) {
+    #main__container {
+      margin-right: var(--global_margin);
+    }
+    h1,
+    h4 {
+      text-align: center;
+    }
+    p {
+      line-height: 125%;
+    }
+  }
   #bkg {
     /*full background overlay currently disabled */
     background-color: rgb(242, 242, 255, 0);
@@ -53,12 +67,7 @@
     margin-right: 2%;
     word-wrap: break-word;
   }
-  /* centers main container on mobile */
-  @media only screen and (max-width: 620px) {
-    #main__container {
-      margin-right: var(--global_margin);
-    }
-  }
+
   h1 {
     font-size: 4rem;
     color: var(--global_header_light);

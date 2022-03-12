@@ -4,7 +4,7 @@
   import { photos, projects } from "./stores.js";
 
   export let title;
-  let showContent = true;
+  let showContent = false;
 
   const dropdownToggle = () => {
     showContent = !showContent;
