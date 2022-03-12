@@ -59,9 +59,11 @@
     color: var(--global_header_light);
     margin-bottom: 0;
     margin-left: -4px;
+    text-decoration: underline;
   }
   h4 {
     margin-top: 0;
+    margin-bottom: 0;
     color: var(--global_header_light);
   }
 </style>
