@@ -1,7 +1,7 @@
 <script>
   import PhotoContainer from "./PhotoContainer.svelte";
   import ProjectContainer from "./ProjectContainer.svelte";
-  import { photos, projects } from "./stores.js";
+  import { dark_mode, photos, projects } from "./stores.js";
 
   export let title;
   let showContent = false;
@@ -10,6 +10,22 @@
     showContent = !showContent;
   };
 </script>
+
+<main>
+  {#if $dark_mode}
+    <style>
+      div {
+        color: var(--global_header_dark);
+      }
+    </style>
+  {:else}
+    <style>
+      div {
+        color: var(--global_header_light);
+      }
+    </style>
+  {/if}
+</main>
 
 <!-- content container header, e.g: ">> Projects" -->
 <div on:click={dropdownToggle}>
@@ -63,7 +79,6 @@
 <style>
   div {
     margin-left: 0;
-    color: var(--global_header_light);
     user-select: none;
   }
 
