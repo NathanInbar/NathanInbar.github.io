@@ -1,5 +1,13 @@
 <script>
   import ContentContainer from "./Components/ContentContainer.svelte";
+  import { dark_mode } from "./Components/stores.js";
+  const theme_toggle_icons = ["🌑", "☀️"];
+  let theme_toggle_icon = theme_toggle_icons[0];
+
+  const toggleDarkMode = () => {
+    $dark_mode = !$dark_mode;
+    theme_toggle_icon = theme_toggle_icons[$dark_mode ? 1 : 0];
+  };
 </script>
 
 <span id="bkg">
@@ -27,6 +35,7 @@
     <ContentContainer title="Projects" />
     <ContentContainer title="Photos" />
     <a href="#main__container">back to top</a>
+    <div on:click={toggleDarkMode}>{theme_toggle_icon}</div>
   </span>
 </span>
 
