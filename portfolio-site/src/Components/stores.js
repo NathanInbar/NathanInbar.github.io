@@ -7,19 +7,19 @@ export let projects = new writable([
   [
     "Twooter",
     "https://i.imgur.com/YfyMgpG.jpg",
-    "https://www.youtube.com/watch?v=VyaNip2X38Q&t=12s",
+    "https://www.youtube.com/watch?v=VyaNip2X38Q",
     "A proof-of-proficiency Twitter clone in React.js",
   ],
   [
     "Conscious Camper",
     "https://i.ytimg.com/vi/5gUVDYUiFUY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB2NSjFO9LEOGYx-YKsvrInNL0LJA",
-    "https://www.youtube.com/watch?v=5gUVDYUiFUY&t=32s",
+    "https://www.youtube.com/watch?v=5gUVDYUiFUY",
     "A winning hackathon project utilizing Google Maps API",
   ],
   [
     "Crypto Clicker",
     "https://raw.githubusercontent.com/TrottersTots/crypto-clicker/dev/readme_assets/CryptoClicker_slide.jpg",
-    "https://www.youtube.com/watch?v=6eza_Ij9gHg&t=20s",
+    "https://www.youtube.com/watch?v=6eza_Ij9gHg",
     "A fun game made for TuffyHacks 2022, also a winning project",
   ],
   [
