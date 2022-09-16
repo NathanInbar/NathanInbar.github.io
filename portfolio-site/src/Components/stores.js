@@ -30,6 +30,13 @@ export let projects = new writable([
   ],
 ]);
 
+
+//Image, description
+export let art = new readable([
+  ["https://i.imgur.com/GzL8z9W.jpeg", "Pu4Zde3" , "'Pelican', Ink on Paper, 2022", "portrait"],
+  ["https://i.imgur.com/rXOgxv8.jpeg", "cT3veBq" , "'Puppy', Ink on Paper, 2022", "landscape"],
+])
+
 //Thumnail Link, Imgur Link
 export let photos = new readable([
   ["https://i.imgur.com/1mPJSQY.jpeg", "https://imgur.com/gallery/7s3GSuz"],

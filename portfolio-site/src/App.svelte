@@ -71,11 +71,11 @@
     <span id="content__bkg">
       <div id="main__container">
         <h1>Nathan Inbar</h1>
-        <h4>Student 📖, Computer Scientist 👨‍💻, Photographer 📷</h4>
+        <h4>Student 📖, Computer Scientist 👨‍💻, Artist 🎨</h4>
         <p>
           Hey, I'm Nathan. I've developed and published a mobile game, 2x
-          winning hackathon entry, and many other projects. <br /> I enjoy film photography,
-          tennis, rock climbing, and digital art!
+          winning hackathon entry, and many other projects. <br /> 
+          I enjoy tennis, rock climbing, and creating art!
         </p>
         <span id="main__links">
           <a href="https://github.com/NathanInbar" target="_blank">Github 💻</a>
@@ -92,8 +92,9 @@
       </div>
       <br />
 
-      <ContentContainer title="Projects" />
-      <ContentContainer title="Photos" />
+      <ContentContainer title="Coding Projects" />
+      <ContentContainer title="Art" />
+      <ContentContainer title="Photography" />
       <a href="#main__container">back to top</a>
     </span>
   </span>
