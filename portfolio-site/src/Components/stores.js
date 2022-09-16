@@ -28,7 +28,20 @@ export let projects = new writable([
     "https://play.google.com/store/apps/details?id=com.weedawgiee.toip&hl=en_CA&gl=US",
     "A fully fledged mobile game available on Google Play Store",
   ],
+  [
+    "Matrix Rotation Visualizer",
+    "https://raw.githubusercontent.com/NathanInbar/Matrix-Rotation-Visualizer/main/media/thumb.png",
+    "https://www.youtube.com/watch?v=8twf27dy_40",
+    "A visualization tool for matrix rotation (fun side project!)"
+  ],
 ]);
+
+
+//Image, description
+export let art = new readable([
+  ["https://i.imgur.com/GzL8z9W.jpeg", "Pu4Zde3" , "'Pelican', Ink on Paper, 2022", "portrait"],
+  ["https://i.imgur.com/rXOgxv8.jpeg", "cT3veBq" , "'Puppy', Ink on Paper, 2022", "landscape"],
+])
 
 //Thumnail Link, Imgur Link
 export let photos = new readable([

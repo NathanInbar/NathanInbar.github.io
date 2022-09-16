@@ -1,7 +1,8 @@
 <script>
+  import ArtContainer from "./ArtContainer.svelte";
   import PhotoContainer from "./PhotoContainer.svelte";
   import ProjectContainer from "./ProjectContainer.svelte";
-  import { dark_mode, photos, projects } from "./stores.js";
+  import { dark_mode, photos, projects, art } from "./stores.js";
 
   export let title;
   let showContent = false;
@@ -41,7 +42,7 @@
 <!-- container's content -->
 {#if showContent}
   <div class="content__container">
-    {#if title == "Projects"}
+    {#if title == "Coding Projects"}
       {#each $projects as project}
         <ProjectContainer
           title={project[0]}
@@ -52,21 +53,27 @@
       {/each}
     {/if}
 
+    {#if title == "Art"}
+      {#each $art as _art}
+        <ArtContainer img_src={_art[0]} link={_art[1]} desc={_art[2]} orientation={_art[3]} />
+      {/each}
+    {/if}
+
     <!-- end project containers -->
-    {#if title == "Photos"}
+    {#if title == "Photography"}
       {#each $photos as photo}
         <PhotoContainer img_src={photo[0]} link={photo[1]} />
       {/each}
     {/if}
   </div>
-  {#if title == "Projects"}
+  {#if title == "Coding Projects"}
     <p>
       view more on <a href="https://github.com/NathanInbar" target="_blank"
         >my github profile</a
       >
     </p>
   {/if}
-  {#if title == "Photos"}
+  {#if title == "Photography"}
     <p>
       view more on <a
         href="https://imgur.com/user/nathaninbar/posts"
