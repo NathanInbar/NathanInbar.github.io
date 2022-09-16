@@ -28,6 +28,12 @@ export let projects = new writable([
     "https://play.google.com/store/apps/details?id=com.weedawgiee.toip&hl=en_CA&gl=US",
     "A fully fledged mobile game available on Google Play Store",
   ],
+  [
+    "Matrix Rotation Visualizer",
+    "https://raw.githubusercontent.com/NathanInbar/Matrix-Rotation-Visualizer/main/media/thumb.png",
+    "https://www.youtube.com/watch?v=8twf27dy_40",
+    "A visualization tool for matrix rotation (fun side project!)"
+  ],
 ]);
 
 
