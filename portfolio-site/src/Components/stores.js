@@ -29,6 +29,12 @@ export let projects = new writable([
     "A fully fledged mobile game available on Google Play Store",
   ],
   [
+    "Blackjack",
+    "https://raw.githubusercontent.com/NathanInbar/Blackjack-pygame/main/assets/thumb.png",
+    "https://www.youtube.com/watch?v=tdGczYqJatI",
+    "A quick implementation of blackjack in pygame"
+  ],
+  [
     "Matrix Rotation Visualizer",
     "https://raw.githubusercontent.com/NathanInbar/Matrix-Rotation-Visualizer/main/media/thumb.png",
     "https://www.youtube.com/watch?v=8twf27dy_40",
